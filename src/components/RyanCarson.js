@@ -3,7 +3,7 @@ import PhotoContainer from './PhotoContainer';
 
 const RyanCarson = props => (
 
-  <PhotoContainer title='RyanCarson' topic='RyanCarson'/>
+  <PhotoContainer title='Ryan Carson' topic='RyanCarson'/>
 )
 
 export default RyanCarson;
