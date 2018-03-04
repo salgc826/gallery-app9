@@ -1,19 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import SearchForm from './components/SearchForm';
+import SearchResults from './components/SearchResults';
+import Pandas from './components/Pandas';
+import Dogs from './components/Dogs';
+import Lamborghini from './components/Lamborghini';
+import {
+    BrowserRouter,
+    Route,
+    Switch
+ } from 'react-router-dom';
+ import NotFound from './components/NotFound';
+ import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <div className="container">
+
+
+
+          <Header />
+
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/search' component={SearchForm} />
+            <Route path='/pandas' component={Pandas}/>
+            <Route path='/dogs' component={Dogs}/>
+            <Route path='/lamborghini' component={Lamborghini}/>
+            <Route path='/search/:topic' component ={SearchResults} />
+            <Route component={NotFound}/>
+          </Switch>
+
+        </div>
+      </BrowserRouter>
     );
   }
 }
