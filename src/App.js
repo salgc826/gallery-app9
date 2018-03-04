@@ -5,6 +5,7 @@ import SearchResults from './components/SearchResults';
 import Pandas from './components/Pandas';
 import Dogs from './components/Dogs';
 import Lamborghini from './components/Lamborghini';
+import RyanCarson from './components/RyanCarson';
 import {
     BrowserRouter,
     Route,
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path='/pandas' component={Pandas}/>
             <Route path='/dogs' component={Dogs}/>
             <Route path='/lamborghini' component={Lamborghini}/>
+            <Route path='/RyanCarson' component={RyanCarson}/>
             <Route path='/search/:topic' component ={SearchResults} />
             <Route component={NotFound}/>
           </Switch>
